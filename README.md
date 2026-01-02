@@ -51,19 +51,19 @@ chmod +x /usr/local/bin/worklog
 ### Option 2: Build from Source
 If you prefer to build Worklog from source, ensure you have Node.js and npm installed. Then, follow these steps:
 
-# 1. Clone the repository.
+#### 1. Clone the repository.
 ```bash
 git clone https://github.com/Kevin-Rozario/worklog.git
 cd worklog
 ```
 
-# 2. Install dependencies and build the project.
+#### 2. Install dependencies and build the project.
 ```bash
 pnpm install
 pnpm run build
 ```
 
-# 3. (Optional) Create a global symlink for easy access.
+#### 3. (Optional) Create a global symlink for easy access.
 ```bash
 pnpm link --global
 ```
