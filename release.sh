@@ -30,7 +30,7 @@ cd $RELEASE_DIR
 echo "Compressing assets..."
 
 # Linux
-mv index-linux worklog-linux
+mv index-linux-x64 worklog-linux
 tar -czf "worklog-v$VERSION-linux-x64.tar.gz" worklog-linux
 rm worklog-linux
 
@@ -40,7 +40,7 @@ zip -q "worklog-v$VERSION-macos-arm64.zip" worklog-macos
 rm worklog-macos
 
 # Windows
-mv index-win.exe worklog.exe
+mv index-win-x64.exe worklog.exe
 zip -q "worklog-v$VERSION-win-x64.zip" worklog.exe
 rm worklog.exe
 
