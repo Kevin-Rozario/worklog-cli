@@ -6,9 +6,15 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Kevin-Rozario/worklog/releases/latest"><img alt="Version" src="https://img.shields.io/github/v/release/Kevin-Rozario/worklog"></a>
-  <a href="https://github.com/Kevin-Rozario/worklog/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/Kevin-Rozario/worklog"></a>
-  <a href="https://github.com/Kevin-Rozario/worklog/actions/workflows/build.yml"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/Kevin-Rozario/worklog/build.yml?branch=main"></a>
+  <a href="https://github.com/Kevin-Rozario/worklog-cli/releases/latest">
+    <img alt="Version" src="https://img.shields.io/github/v/release/Kevin-Rozario/worklog-cli">
+  </a>
+  <a href="https://github.com/Kevin-Rozario/worklog-cli/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/Kevin-Rozario/worklog-cli">
+  </a>
+  <a href="https://github.com/Kevin-Rozario/worklog-cli/actions/workflows/build.yml">
+    <img alt="Build" src="https://img.shields.io/github/actions/workflow/status/Kevin-Rozario/worklog-cli/build.yml?branch=main">
+  </a>
 </p>
 
 ## Overview
@@ -32,7 +38,9 @@ Built with performance in mind, Worklog helps you manage your day by allowing yo
 Worklog is distributed as a standalone native binary, meaning you can start tracking your time immediately without needing Node.js, npm, or any other dependencies installed on your system.
 
 ### Option 1: Quick Install (Recommended)
+
 #### **Linux (x86_64)**
+
 ```bash
 curl -L https://github.com/Kevin-Rozario/worklog-cli/releases/download/v1.0.0/worklog-v1.0.0-linux-x64.tar.gz | tar xz
 sudo mv worklog-linux /usr/local/bin/worklog
@@ -40,6 +48,7 @@ sudo chmod +x /usr/local/bin/worklog
 ```
 
 #### **macOS (Apple Silicon)**
+
 ```bash
 curl -L -O https://github.com/Kevin-Rozario/worklog-cli/releases/download/v1.0.0/worklog-v1.0.0-macos-arm64.zip
 unzip -q worklog-v1.0.0-macos-arm64.zip
@@ -50,21 +59,25 @@ sudo xattr -dr com.apple.quarantine /usr/local/bin/worklog
 ```
 
 ### Option 2: Build from Source
+
 If you prefer to build Worklog from source, ensure you have Node.js and npm installed. Then, follow these steps:
 
 #### 1. Clone the repository.
+
 ```bash
 git clone https://github.com/Kevin-Rozario/worklog.git
 cd worklog
 ```
 
 #### 2. Install dependencies and build the project.
+
 ```bash
 pnpm install
 pnpm run build
 ```
 
 #### 3. (Optional) Create a global symlink for easy access.
+
 ```bash
 pnpm link --global
 ```
@@ -105,6 +118,7 @@ Jump to another existing task from the current day.
 ```bash
 worklog switch <task-name>
 ```
+
 > **Note:** Find the `task-name` by using the `worklog status` command.
 
 ### View Current Status
