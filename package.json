@@ -1,0 +1,34 @@
+{
+  "name": "worklog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "worklog": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "bundle": "pnpm build && npx esbuild dist/index.js --bundle --platform=node --format=cjs --outfile=dist/bundle/index.js --external:path --external:os --external:fs",
+    "package:linux": "pnpm --silent bundle && pkg dist/bundle/index.js --targets node18-linux-x64 --output bin/worklog-linux",
+    "package:mac": "pnpm bundle && pkg dist/bundle/index.js --targets node18-macos-arm64 --output bin/worklog-macos",
+    "dev": "tsx src/index.ts",
+    "link-worklog": "pnpm build && pnpm link --global"
+  },
+  "keywords": [],
+  "author": "Kevin Rozario",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.2",
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "esbuild": "^0.27.2",
+    "pkg": "^5.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "dayjs": "^1.11.19"
+  }
+}
