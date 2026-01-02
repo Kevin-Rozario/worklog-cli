@@ -1,7 +1,7 @@
 {
   "name": "worklog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Professional CLI Work Log Tracker",
   "main": "index.js",
   "type": "module",
   "bin": {
@@ -10,14 +10,11 @@
   "scripts": {
     "build": "tsc",
     "bundle": "pnpm build && npx esbuild dist/index.js --bundle --platform=node --format=cjs --outfile=dist/bundle/index.js --external:path --external:os --external:fs",
-    "package:linux": "pnpm --silent bundle && pkg dist/bundle/index.js --targets node18-linux-x64 --output bin/worklog-linux",
-    "package:mac": "pnpm bundle && pkg dist/bundle/index.js --targets node18-macos-arm64 --output bin/worklog-macos",
-    "dev": "tsx src/index.ts",
-    "link-worklog": "pnpm build && pnpm link --global"
+    "release": "chmod +x release.sh && ./release.sh",
+    "dev": "tsx src/index.ts"
   },
-  "keywords": [],
   "author": "Kevin Rozario",
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "pnpm@10.26.2",
   "devDependencies": {
     "@types/node": "^25.0.3",
