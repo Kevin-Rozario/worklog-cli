@@ -31,17 +31,41 @@ Built with performance in mind, Worklog helps you manage your day by allowing yo
 
 ## Installation
 
+Worklog is distributed as a standalone native binary, meaning you can start tracking your time immediately without needing Node.js, npm, or any other dependencies installed on your system.
+
+### Option 1: Quick Install (Recommended)
+#### **Linux (x86_64)**
 ```bash
-# Clone the repository
+curl -L [https://github.com/Kevin-Rozario/worklog/releases/download/v1.0.0/worklog-v1.0.0-linux-x64.tar.gz](https://github.com/Kevin-Rozario/worklog/releases/download/v1.0.0/worklog-v1.0.0-linux-x64.tar.gz) | tar xz
+sudo mv worklog-linux /usr/local/bin/worklog
+sudo chmod +x /usr/local/bin/worklog
+```
+#### **macOS (Apple Silicon)**
+```bash
+curl -L -O [https://github.com/Kevin-Rozario/worklog/releases/download/v1.0.0/worklog-v1.0.0-macos-arm64.zip](https://github.com/Kevin-Rozario/worklog/releases/download/v1.0.0/worklog-v1.0.0-macos-arm64.zip)
+unzip worklog-v1.0.0-macos-arm64.zip
+sudo mv worklog-macos /usr/local/bin/worklog
+chmod +x /usr/local/bin/worklog
+```
+
+### Option 2: Build from Source
+If you prefer to build Worklog from source, ensure you have Node.js and npm installed. Then, follow these steps:
+
+# 1. Clone the repository.
+```bash
 git clone https://github.com/Kevin-Rozario/worklog.git
 cd worklog
+```
 
-# Build the project
-npm install
-npm run build
+# 2. Install dependencies and build the project.
+```bash
+pnpm install
+pnpm run build
+```
 
-# (Optional) Create a global symlink for easy access
-npm link
+# 3. (Optional) Create a global symlink for easy access.
+```bash
+pnpm link --global
 ```
 
 ## Usage
