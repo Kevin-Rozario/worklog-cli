@@ -1,8 +1,6 @@
 <p align="center">
   <br>
-  <strong><samp>Worklog</samp></strong>
-  <br>
-  <br>
+  <h1>Worklog</h1>
   <samp>A professional, local-first time and task management CLI for developers.</samp>
   <br>
 </p>
@@ -36,16 +34,19 @@ Worklog is distributed as a standalone native binary, meaning you can start trac
 ### Option 1: Quick Install (Recommended)
 #### **Linux (x86_64)**
 ```bash
-curl -L [https://github.com/Kevin-Rozario/worklog/releases/download/v1.0.0/worklog-v1.0.0-linux-x64.tar.gz](https://github.com/Kevin-Rozario/worklog/releases/download/v1.0.0/worklog-v1.0.0-linux-x64.tar.gz) | tar xz
+curl -L https://github.com/Kevin-Rozario/worklog-cli/releases/download/v1.0.0/worklog-v1.0.0-linux-x64.tar.gz | tar xz
 sudo mv worklog-linux /usr/local/bin/worklog
 sudo chmod +x /usr/local/bin/worklog
 ```
+
 #### **macOS (Apple Silicon)**
 ```bash
-curl -L -O [https://github.com/Kevin-Rozario/worklog/releases/download/v1.0.0/worklog-v1.0.0-macos-arm64.zip](https://github.com/Kevin-Rozario/worklog/releases/download/v1.0.0/worklog-v1.0.0-macos-arm64.zip)
-unzip worklog-v1.0.0-macos-arm64.zip
-sudo mv worklog-macos /usr/local/bin/worklog
+curl -L -O https://github.com/Kevin-Rozario/worklog-cli/releases/download/v1.0.0/worklog-v1.0.0-macos-arm64.zip
+unzip -q worklog-v1.0.0-macos-arm64.zip
+sudo mv -f worklog-macos /usr/local/bin/worklog
 chmod +x /usr/local/bin/worklog
+# Optional: Remove macOS quarantine for unsigned binaries
+sudo xattr -dr com.apple.quarantine /usr/local/bin/worklog
 ```
 
 ### Option 2: Build from Source
