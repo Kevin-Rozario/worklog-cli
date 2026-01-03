@@ -96,7 +96,7 @@ worklog start "My first task"
 
 ### Log a New Task
 
-Use `log` to stop the currently active task and start a new one in a single command.
+Use `log` to record the progress done on the currently active task.
 
 ```bash
 worklog log "Work on feature B"
@@ -131,7 +131,7 @@ worklog status
 
 ### View Daily Log
 
-See a log of all activities for the day.
+See recent logs for the currently active task.
 
 ```bash
 worklog log:view
@@ -145,12 +145,20 @@ Get a summary of all tasks and time spent. You can also generate reports for pas
 worklog report
 ```
 
-### Finish the Day
+### Completion of a task
 
-Finalize all tasks and get a comprehensive end-of-day report.
+Mark the current task as done.
 
 ```bash
 worklog done
+```
+
+### End of Day
+
+Set all the tasks / breaks a hard stop at the end of the day.
+
+```bash
+worklog finish
 ```
 
 ## Data Storage
